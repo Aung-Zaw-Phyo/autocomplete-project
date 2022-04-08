@@ -1,0 +1,287 @@
+/* autocomplete  */
+
+.autocomplete{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(137, 43, 226, 0.558);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+
+.searchInput{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: none;
+}
+
+.resultProduct{
+    width: 100%;
+    max-height: 500px;
+    overflow: scroll;
+    background-color: white;
+}
+
+.productcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+.productTitle{
+    font-size: small;
+}
+
+.productImg{
+    height: 70%;
+    padding-left: 5px;
+}
+
+
+.selContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.selImg{
+    width: 140px;
+    height: 18opx;
+}
+
+.modalBtn{
+    opacity: 0;
+    z-index: 0;
+}
+
+/* autocomplete end */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo>img{
+    width: 250px;
+    height: 50px;
+}
+
+.downMenu{
+    position: relative;
+}
+
+.downMenu>ul{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: -60px;
+    padding: 5px 18px;
+    background-color: white;
+    list-style: none;
+    display: none;
+}
+
+.hover{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.hover:hover{
+    color: #ca8607 !important;
+}
+
+
+/* sliderSection start  */
+
+.sliderSection{
+    margin-top: 80px;
+    background-image: url('images/slider-bg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: 700px;
+}
+
+.sale{
+    font-size: 70px;
+    color:red;
+}
+
+.everything{
+    font-size: 70px;
+    color: rgba(0, 0, 0, 0.76);
+}
+
+.sale-text{
+    font-size: larger;
+}
+
+
+/* slider section end  */
+
+/* shopSection start  */
+.shopHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopHeader>.divider{
+    height: 5px;
+    width: 65px;
+    background-color: red;
+}
+
+.card{
+    background-color: rgba(4, 4, 28, 0.851);
+}
+
+/* shopSection end  */
+
+/* arrivalSection start  */
+.arrivalSection{
+    background-image: url('images/arrival-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100%;
+    height: 700px;
+}
+
+/* arrivalSection end  */
+
+
+
+/* product section start  */
+
+.productHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productHeader>.divider{
+    height: 5px;
+    width: 65px;
+    background-color: red;
+}
+
+
+.product{
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(251 251 252);
+    
+}
+
+.product:hover > .cover{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.product:hover > img{
+    transform: scale(1.1);
+}
+
+.product>img{
+    transition: all .2s;
+}
+
+.cover{
+   width: 100%;
+   height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.32);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform .2s;
+    opacity: 0;
+}
+
+.cover>button{
+    width: 170px;
+    height: 43px;
+    border-radius: 20px;
+    margin: 8px;
+    padding: auto;
+}
+
+.danger:hover{
+    background-color: transparent;
+    color: red;
+}
+
+.dark:hover{
+    background-color: transparent;
+    color: black;
+}
+
+/* product section end  */
+
+
+/* subscribe section  start */
+.subscribeSection{
+    background-color:#d4ced0;
+}
+
+.subTitle{
+  font-weight: bold;
+}
+
+.subText{
+    font-size: larger;
+}
+
+.subInput{
+    width: 90%;
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+.subBtn{
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+}
+/* subscribe section  end */
+
+/* testimonial start  */
+
+.testHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testHeader>.divider{
+    height: 5px;
+    width: 65px;
+    background-color: red;
+}
+
+.cusText{
+    width: 85%;
+    
+}
+
+/* testimonial end  */
+
