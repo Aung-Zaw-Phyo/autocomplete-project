@@ -18,6 +18,8 @@ downMenu.addEventListener('click', ()=>{
 const auto = document.querySelector('.auto');
 const removeAuto = document.querySelector('.removeAuto');
 const autocomplete = document.querySelector('.autocomplete');
+const searchInput = document.querySelector('.searchInput');
+const resultProduct = document.querySelector('.resultProduct');
 
 auto.addEventListener('click', ()=>{
     autocomplete.style.display='flex';
@@ -25,13 +27,12 @@ auto.addEventListener('click', ()=>{
 
 removeAuto.addEventListener('click', ()=>{
     autocomplete.style.display='none';
+
+    searchInput.value='';
+    resultProduct.innerHTML='';
 })
 
 
-
-
-const searchInput = document.querySelector('.searchInput');
-const resultProduct = document.querySelector('.resultProduct');
 let products ;
 let productsFromApi = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
@@ -102,6 +103,8 @@ searchInput.addEventListener('keyup', (event)=>{
                 selContainer.append(title, img, price, btnCon);
                 showTag.append(selContainer);
                 modalBtn.click();
+                searchInput.value='';
+                resultProduct.innerHTML='';
                 
             });
 
@@ -152,6 +155,8 @@ let selectProductFunction =(key) => {
         selectedProduct.classList.add('selected');
     } else {
         ppp(indexToSlect)
+        searchInput.value='';
+        resultProduct.innerHTML='';
     }
 }
 let selectProduct = (index) =>{
